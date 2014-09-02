@@ -1,0 +1,37 @@
+# Music Generator
+Study corpus of music, for find Markov chains and finally generate not-totally-random music.
+
+
+
+## Transcription
+_Objectives :_ get states of multiple musics, in readable format.
+_Input :_ paths to wav files
+_Output :_ a file where states are described in a FASTA-like format.
+_Language :_ Matlab
+
+
+## Generation
+_Objectives :_ generate music with the help of FASTA-like files.
+_Input :_ path to the FASTA-like formatted file, and meta-data about output.
+_Output :_ FASTA-like formatted file that contain generated music, according to input meta-data. (number, size,...)
+_Language :_ Python
+
+
+## States
+This is the way for represent music.   
+In a first time, we use only name of notes (or number) without indications of tempo and rythms.
+
+
+
+## FASTA-like format
+Example of FASTA-like format :
+
+    Au clair de la lune
+    >sol sol sol la si la sol si la la sol
+    Oh when the saints
+    >sol si re do sol si re do sol si re do 
+    si sol si la si si la sol sol si la re 
+    re sol si si la sol si la si sol
+
+Name of a sequence is always before the sequence itself. The name is on one only line, but sequence can be break in multiple lines.
+
