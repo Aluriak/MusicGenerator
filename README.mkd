@@ -10,16 +10,22 @@ _Output :_ a file where states are described in a FASTA-like format.
 _Language :_ Matlab
 
 
-## Generation
-_Objectives :_ generate music with the help of FASTA-like files.
+## Extraction
+_Objectives :_ Extract the probability of apparition of every musical note over 1Gram,2Gram and 3 Gram
 _Input :_ path to the FASTA-like formatted file, and meta-data about output.
+_Output :_ Array of meta data containing the probability.
+_Language :_ Python (Matlab for the moment)
+
+## Generation
+_Objectives :_ generate music with the help of Meta data files.
+_Input :_ Array of meta data.
 _Output :_ FASTA-like formatted file that contain generated music, according to input meta-data. (number, size,...)
 _Language :_ Python
 
-
 ## States
 This is the way for represent music.   
-In a first time, we use only name of notes (or number) without indications of tempo and rythms.
+In a first time, we use only name of notes (or number) without indications of tempo, rythms and octave.
+As a music does not contain a lot of data only 3Gram analysis will be done.  
 
 
 
