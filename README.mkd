@@ -10,9 +10,16 @@ _Output :_ a file where states are described in a FASTA-like format.
 _Language :_ Matlab
 
 
-## Generation
-_Objectives :_ generate music with the help of FASTA-like files.
-_Input :_ path to the FASTA-like formatted file, and meta-data about output.
+## DATABASE GENERATION
+_Objectives :_ generate database file with the help of FASTA-like files.
+_Input :_ path to the FASTA-like formatted file, and parameters for markov model.
+_Output :_ pickle formatted file that contain markov model.
+_Language :_ Python
+
+
+## MUSIC GENERATION
+_Objectives :_ generate music with the help of markov model.
+_Input :_ path to a pickle formatted file that contain a markov model, and meta-data about output.
 _Output :_ FASTA-like formatted file that contain generated music, according to input meta-data. (number, size,...)
 _Language :_ Python
 
@@ -26,10 +33,10 @@ In a first time, we use only name of notes (or number) without indications of te
 ## FASTA-like format
 Example of FASTA-like format :
 
-    Au clair de la lune
-    >sol sol sol la si la sol si la la sol
-    Oh when the saints
-    >sol si re do sol si re do sol si re do 
+    >Au clair de la lune
+    sol sol sol la si la sol si la la sol
+    >Oh when the saints
+    sol si re do sol si re do sol si re do 
     si sol si la si si la sol sol si la re 
     re sol si si la sol si la si sol
 
