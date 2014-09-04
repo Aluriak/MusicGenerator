@@ -23,10 +23,10 @@ _Input :_ path to a pickle formatted file that contain a markov model, and meta-
 _Output :_ FASTA-like formatted file that contain generated music, according to input meta-data. (number, size,...)
 _Language :_ Python
 
-
 ## States
 This is the way for represent music.   
-In a first time, we use only name of notes (or number) without indications of tempo and rythms.
+In a first time, we use only name of notes (or number) without indications of tempo, rythms and octave.
+As a music does not contain a lot of data only 3Gram analysis will be done.  
 
 
 
