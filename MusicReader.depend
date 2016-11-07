@@ -190,3 +190,41 @@
 	<bits/cmathcalls.h>
 	<bits/cmathcalls.h>
 
+1477957972 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/main.cpp
+	<sndfile.h>
+	<stdio.h>
+	<iostream>
+	"Header/wavfile.h"
+	"Header/audioalgo.h"
+	"Header/plotfile.h"
+	"Header/filter.h"
+
+1477607666 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Header/wavfile.h
+	<sndfile.hh>
+	<iostream>
+
+1477942025 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Header/audioalgo.h
+	<math.h>
+	<vector>
+	<stdlib.h>
+	<iostream>
+
+1477422252 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Header/plotfile.h
+	"discpp.h"
+	<iostream>
+
+1477538353 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Header/filter.h
+
+1477946064 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Sources/audioalgo.cpp
+	"../Header/audioalgo.h"
+	"../Header/plotfile.h"
+
+1477538450 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Sources/filter.cpp
+	"../Header/filter.h"
+
+1477604935 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Sources/plotfile.cpp
+	"../Header/plotfile.h"
+
+1477607688 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicGenerator/Sources/wavfile.cpp
+	"../Header/wavfile.h"
+
