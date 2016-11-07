@@ -7,7 +7,7 @@ Study corpus of music, for find Markov chains and finally generate not-totally-r
 _Objectives :_ get states of multiple musics, in readable format.
 _Input :_ paths to wav files
 _Output :_ a file where states are described in a FASTA-like format.
-_Language :_ Matlab
+_Language :_ C++
 
 
 ## DATABASE GENERATION

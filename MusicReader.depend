@@ -1,0 +1,192 @@
+# depslib dependency file v1.0
+1477946242 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/main.cpp
+	<sndfile.h>
+	<stdio.h>
+	<iostream>
+	"Header/wavfile.h"
+	"Header/audioalgo.h"
+	"Header/plotfile.h"
+	"Header/filter.h"
+
+1477407442 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/wavfile.cpp
+	"wavfile.h"
+
+1477407437 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/wavfile.h
+	<sndfile.hh>
+	<iostream>
+
+1460671772 /usr/include/stdio.h
+	<features.h>
+	<stddef.h>
+	<bits/types.h>
+	<libio.h>
+	<stdarg.h>
+	<bits/stdio_lim.h>
+	<bits/sys_errlist.h>
+	<getopt.h>
+	<bits/stdio.h>
+	<bits/stdio2.h>
+	<bits/stdio-ldbl.h>
+
+1460671745 /usr/include/features.h
+	<stdc-predef.h>
+	<sys/cdefs.h>
+	<gnu/stubs.h>
+
+1460671745 /usr/include/stdc-predef.h
+
+1460671772 /usr/include/libio.h
+	<_G_config.h>
+	<stdarg.h>
+	<sys/cdefs.h>
+	<shlib-compat.h>
+	<bits/libio-ldbl.h>
+
+1460671772 /usr/include/_G_config.h
+	<bits/types.h>
+	<stddef.h>
+	<wchar.h>
+	<gconv.h>
+
+1460671776 /usr/include/wchar.h
+	<features.h>
+	<stdio.h>
+	<stdarg.h>
+	<bits/wchar.h>
+	<stddef.h>
+	<wctype.h>
+	<xlocale.h>
+	<xlocale.h>
+	<xlocale.h>
+	<wctype.h>
+	<bits/wchar2.h>
+	<bits/wchar-ldbl.h>
+
+1460671788 /usr/include/wctype.h
+	<features.h>
+	<bits/types.h>
+	<wchar.h>
+	<endian.h>
+	<xlocale.h>
+
+1460671775 /usr/include/endian.h
+	<features.h>
+	<bits/endian.h>
+	<bits/byteswap.h>
+
+1460671746 /usr/include/xlocale.h
+
+1460671745 /usr/include/gconv.h
+	<features.h>
+	<wchar.h>
+	<stddef.h>
+
+1460671779 /usr/include/getopt.h
+	<ctype.h>
+
+1460671765 /usr/include/ctype.h
+	<features.h>
+	<bits/types.h>
+	<endian.h>
+	<xlocale.h>
+
+1460671768 /usr/include/math.h
+	<features.h>
+	<bits/math-vector.h>
+	<bits/huge_val.h>
+	<bits/huge_valf.h>
+	<bits/huge_vall.h>
+	<bits/inf.h>
+	<bits/nan.h>
+	<bits/mathdef.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathcalls.h>
+	<bits/mathinline.h>
+	<bits/math-finite.h>
+
+1417558167 /usr/include/fftw3.h
+	<stdio.h>
+	<stddef.h>
+
+1466666012 /usr/local/dislin/discpp.h
+
+1477407237 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/plot.h
+	"discpp.h"
+
+1477438694 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/audioalgo.cpp
+	"audioalgo.h"
+	<fftw3.h>
+	<iostream>
+	"plotfile.h"
+
+1477435859 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/audioalgo.h
+	<math.h>
+
+1477406877 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/plot.h
+	"discpp.h"
+
+1477422252 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/plotfile.h
+	"discpp.h"
+	<iostream>
+
+1477438726 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/plotfile.cpp
+	"plotfile.h"
+
+1477607666 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Header/wavfile.h
+	<sndfile.hh>
+	<iostream>
+
+1477942025 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Header/audioalgo.h
+	<math.h>
+	<vector>
+	<stdlib.h>
+	<iostream>
+
+1477422252 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Header/plotfile.h
+	"discpp.h"
+	<iostream>
+
+1477946064 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Sources/audioalgo.cpp
+	"../Header/audioalgo.h"
+	"../Header/plotfile.h"
+
+1477538450 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Sources/filter.cpp
+	"../Header/filter.h"
+
+1477538353 /media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Header/filter.h
+
+1477604935 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Sources/plotfile.cpp
+	"../Header/plotfile.h"
+
+1477607688 source:/media/nuopel/Windows/Users/Samuel/Projets/C++/DSProcess/MusicReader/Sources/wavfile.cpp
+	"../Header/wavfile.h"
+
+1460671771 /usr/include/stdlib.h
+	<features.h>
+	<stddef.h>
+	<bits/waitflags.h>
+	<bits/waitstatus.h>
+	<xlocale.h>
+	<sys/types.h>
+	<alloca.h>
+	<bits/stdlib-bsearch.h>
+	<bits/stdlib-float.h>
+	<bits/stdlib.h>
+	<bits/stdlib-ldbl.h>
+
+1460671771 /usr/include/alloca.h
+	<features.h>
+	<stddef.h>
+
+1460671768 /usr/include/tgmath.h
+	<math.h>
+	<complex.h>
+
+1460671768 /usr/include/complex.h
+	<features.h>
+	<bits/mathdef.h>
+	<bits/cmathcalls.h>
+	<bits/cmathcalls.h>
+	<bits/cmathcalls.h>
+
