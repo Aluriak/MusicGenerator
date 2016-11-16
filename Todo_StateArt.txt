@@ -38,4 +38,7 @@ STATE OF THE ART
             test with the program OnsetAlgoTest.m, however when the density of note become high, errors are occuring.
             It also not a versatile method as parameters are set by trial and error.
     
-    
+    MAIN
+        If You run the main.m in the folder Matlab, you can see the results of the different algo.
+            It's quite fast, however the last part to replay is quite consuming (CPU) because it's a fast patch.
+            You can see that there is error in pitch, likely in the high frequency part because the original music the high pitched. There is also mistakes of note placements.
