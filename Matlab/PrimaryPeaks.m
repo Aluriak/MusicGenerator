@@ -26,7 +26,7 @@ function [ winner ] = PrimaryPeaks( posPeaks,peaks )
 %  [ winner ] = PrimaryPeaks( posPeaks,peaks )
 %
 
-     vThr = max(peaks)*0.9;
+     vThr = max(peaks)*0.75;
      pos = find(peaks>vThr);
      winner(1) = posPeaks(pos(1));
      winner(2) = peaks(pos(1));

@@ -30,9 +30,9 @@ function [ posPeak, peak ] = PeakPicking( input )
  posPeak=1;
  peak=0;
  TAILLE=length(input);
- while(input(debut)>input(debut+10) && input(debut)>0)%locate first treshold
-    debut=debut+1;
- end
+%  while(input(debut)>input(debut+10) && input(debut)>0)%locate first treshold
+%     debut=debut+1;
+%  end
  
  for i = debut:TAILLE/2
     
@@ -42,7 +42,6 @@ function [ posPeak, peak ] = PeakPicking( input )
                 test=1;
                 maxThr=input(i);
                 pos=i;
-            
             end
         else    
            if(input(i)>maxThr)          
@@ -57,9 +56,15 @@ function [ posPeak, peak ] = PeakPicking( input )
            end
         end
  end
- posPeak(1)='';
- peak(1)='';
+ %trick to add last cut peak, to do --> do something better
+               posPeak(end+1,1)=pos;
+               peak(end+1,1)=maxThr;  
+               
+ posPeak(1:2)='';
+ peak(1:2)='';
+
 [posPeak,peak]= Interp3Peak(posPeak,input(posPeak-1),peak,input(posPeak+1));
+%if posPeak<0
 
 
 
