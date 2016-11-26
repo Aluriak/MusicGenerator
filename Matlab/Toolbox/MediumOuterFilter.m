@@ -64,7 +64,7 @@
 %% calculate biquad coefficient and verification
     [yulefilt.sos] = tf2sos(yulefilt.b,yulefilt.a);% 10th in biquad
     flag = isstable(yulefilt.sos);%stability
-    if flag == 0
+   if flag == 0
         sprintf('The yulewalk sos filter is unstable')        
     end
     

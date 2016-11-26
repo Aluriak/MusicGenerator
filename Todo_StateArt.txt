@@ -13,7 +13,9 @@ TODO
         ->filtering?
     - find others onset detections
     
-    -see if notes could be directly imported from midi partition (almost certain)
+    *see if notes could be directly imported from midi partition (almost certain)
+        work fucking well why do i bother with detection algorithm already??
+        
     -implement Markov chain to regenerate music.
     
     -Writte a detailled article on everything

@@ -1,0 +1,106 @@
+\documentclass[twoside,twocolumn]{report}
+
+%\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} 
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}% accents
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=20mm,columnsep=17pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Music regenerator   $\bullet$ November 2016 } % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{amsmath} % Customizing the title section
+\usepackage{graphicx,epstopdf}
+\usepackage{mathtools}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Music REgenerator } % Article title
+\author{%
+\textsc{Samuel Dupont}\\ %\thanks{A thank you or further information} \\[1ex] 
+\textsc{Lucas Bourneuf}\\% Your name
+%\normalsize Université du Maine \\ % Your institution
+\normalsize \href{mailto:Samuel.dupont.etu@univ-lemans.fr}{Samuel.dupont.etu@univ-lemans.fr } 
+}
+
+\date{November 26, 2016 \\ Last update: \today}
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent 
+
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+
+\section{Introduction}
+
+
+\begin{figure}[h!]
+	\centering
+	%\includegraphics[scale=0.45]{./images/normalised_sinus.eps}
+	\caption{Normalised cardinal sinus, $f_c=1$}
+	\label{sinc}
+\end{figure}
+
+\section{Conclusion}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%--------------------------------------%
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+
+
+\bibitem{mcleod2009fast} McLeod\H Philip, \emph{Fast, accurate pitch detection tools for music analysis}, Academisch proefschrift, 2009 , University of Otago. Department of Computer Science
+
+
+%\newblock Assortative pairing and life history strategy - a cross-cultural
+%  study.
+%\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}--------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
