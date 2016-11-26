@@ -44,6 +44,7 @@ def double_independances(notes:iter, times:iter, *, note_number:int=None,
     starting sequence, or the beginning of given notes and times.
 
     """
+    times = tuple(time_classifier(times))
     # get markov starting values
     if not note_start:
         notes, first_notes = itertools.tee(notes)
