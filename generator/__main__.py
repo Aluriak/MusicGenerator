@@ -26,11 +26,12 @@ def notes_from_file(filename:str=INPUT_FILE, delimiter:str=INPUT_DELIM) -> iter:
 if __name__ == "__main__":
     notes, mss = (zip(*tuple(notes_from_file())))
     print('PLAYING INPUT MUSIC…')
-    music_player.play(zip(notes, mss))
+    # music_player.play(zip(notes, mss))
 
     print('PLAYING GENERATED MUSIC…')
     classif = classifier.clusterizer_by(4)
-    classif_value = {0: 0.1, 1: 0.2, 2: 0.3, 3: 0.4}
+    SPEED = 0.6
+    classif_value = {c: v*SPEED for c, v in {0: 1, 1: 2, 2: 3, 3: 4}.items()}
     gen = generator.double_independances(notes, mss, time_classifier=classif,
-                                         note_number=10)
+                                         note_number=10000)
     music_player.play(gen, classif_value)
