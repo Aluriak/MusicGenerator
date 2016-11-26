@@ -2,6 +2,7 @@
 
 import csv
 from generator import generator
+from generator import classifier
 from generator import music_player
 
 
@@ -28,5 +29,8 @@ if __name__ == "__main__":
     music_player.play(zip(notes, mss))
 
     print('PLAYING GENERATED MUSIC…')
-    gen = generator.double_independances(notes, mss, note_number=10)
-    music_player.play(gen)
+    classif = classifier.clusterizer_by(4)
+    classif_value = {0: 0.1, 1: 0.2, 2: 0.3, 3: 0.4}
+    gen = generator.double_independances(notes, mss, time_classifier=classif,
+                                         note_number=10)
+    music_player.play(gen, classif_value)
