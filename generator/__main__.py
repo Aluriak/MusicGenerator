@@ -6,8 +6,8 @@ from generator import classifier
 from generator import music_player
 
 
-INPUT_FILE = './Matlab/notesR.txt'
-INPUT_FILE = './Matlab/notesRlong.txt'
+INPUT_FILE = './Matlab/NotesTrouve/notesR.txt'
+INPUT_FILE = './Matlab/NotesTrouve/notesRlong.txt'
 INPUT_DELIM = '\t'
 
 
