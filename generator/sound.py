@@ -13,25 +13,36 @@ Next versions should take a look to https://wiki.python.org/moin/Audio/
 
 import threading
 try:
-    import winsound
-    UNIX = False
-except ImportError:  # we are on unix. probably.
-    UNIX = True
-    from wave import open as open_wave
-    from ossaudiodev import open as open_oss
+    import pygame.mixer
+    PYGAME = True
+    print('AUDIO: pygame will be used.')
+except ImportError:  # no SDL: use stdlib.
+    PYGAME = False
     try:
-        from ossaudiodev import AFMT_S16_NE
-    except ImportError:
-        from sys import byteorder
-        if byteorder == "little": AFMT_S16_NE = ossaudiodev.AFMT_S16_LE
-        else:                     AFMT_S16_NE = ossaudiodev.AFMT_S16_BE
+        import winsound
+        UNIX = False
+        print('AUDIO: winsound will be used.')
+    except ImportError:  # we are on unix. probably.
+        UNIX = True
+        from wave import open as open_wave
+        from ossaudiodev import open as open_oss
+        try:
+            from ossaudiodev import AFMT_S16_NE
+        except ImportError:
+            from sys import byteorder
+            if byteorder == "little": AFMT_S16_NE = ossaudiodev.AFMT_S16_LE
+            else:                     AFMT_S16_NE = ossaudiodev.AFMT_S16_BE
+        print('AUDIO: OSS will be used.')
 
 WAV_FILE_TEMPLATE = "./Matlab/PianoNote/{}.wav"
 
-
 def play_midi(code:int):
     wavefile = WAV_FILE_TEMPLATE.format(code)
-    if UNIX:
+    if PYGAME:
+        pygame.mixer.init()
+        pygame.mixer.music.load(wavefile)
+        pygame.mixer.music.play()
+    elif UNIX:
         with open_wave(wavefile, 'rb') as fd, open_oss('/dev/dsp', 'w') as dsp:
             nc, sw, fr, nf, comptype, compname = fd.getparams()
             dsp.setparameters(AFMT_S16_NE, nc, fr)
