@@ -40,6 +40,11 @@ def k_clustering(times:tuple, groups:tuple) -> iter:
                 for time in times)
 
 
+def non_classified(times:tuple) -> tuple:
+    """Return the same data, allowing client to keep the same data"""
+    return times
+
+
 def clusterizer_by(n:int) -> callable:
     """Return a function equals to partial k_clustering(2), where groups are
     already provided as n elements.
