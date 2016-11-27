@@ -41,9 +41,9 @@ if __name__ == "__main__":
         player = music_player.play if args['--play-input'] else music_player.timed_play
         player(zip(notes, mss))
 
-    classif = classifier.clusterizer_by(4)
-    SPEED = 0.6
-    classif_value = {c: v*SPEED for c, v in {0: 1, 1: 2, 2: 3, 3: 4}.items()}
+    CLASSIF_K, SPEED = 6, 0.2
+    classif = classifier.clusterizer_by(CLASSIF_K)
+    classif_value = {c: (idx*2)*SPEED for idx, c in enumerate(range(CLASSIF_K), start=1)}
     gen = gen_method(notes, mss, time_classifier=classif, note_number=100)
 
     if args['--midi']:
