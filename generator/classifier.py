@@ -35,7 +35,6 @@ def k_clustering(times:tuple, groups:tuple) -> iter:
     time_per_group = math.ceil(len(times) / len(groups))
     # bounds is the list of minimal values to be in a group. The first is not given.
     bounds = tuple(values[0] for values in utils.grouper(sorted_times, time_per_group))[1:]
-    print(bounds)
     yield from (_cluster(time, bounds, groups)
                 for time in times)
 
