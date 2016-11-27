@@ -19,8 +19,12 @@ _Output :_ play music automatically generated.
 _Alternative output :_ write midi file
 
 This is pure Python. To play sound, stdlib is used if pygame is not found.
-You really should use pygame.
+You really should use the midi output.
 Not tested on windows, but should work.
+
+See Makefile for CLI example, or use `python -m generator --help` for doc.
+
+See `requirements.txt` for non-optional packages, and `optional_requirements.txt` for the optional ones.
 
 
 
