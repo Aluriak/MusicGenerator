@@ -7,15 +7,15 @@ Study corpus of music to find Markov chains and finally generate not-totally-ran
 
 ## Transcription
 _Objectives :_ get states of a music, in readable format.
-_Input :_ paths to wav files
-_Output :_ a file where states are described as a TSV that maps time and notes.
+_Input :_ paths to wav files  
+_Output :_ a file where states are described as a TSV that maps time and notes.  
 _Language :_ Matlab
 
 
 ## Generator python package
-_Objectives :_ generate music with the help of markov model.
-_Input :_ file containing TSV that maps time and notes.
-_Output :_ play music automatically generated.
+_Objectives :_ generate music with the help of markov model.  
+_Input :_ file containing TSV that maps time and notes.  
+_Output :_ play music automatically generated.  
 _Alternative output :_ write midi file
 
 This is pure Python. To play sound, stdlib is used if pygame is not found.
