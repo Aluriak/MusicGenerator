@@ -1,6 +1,8 @@
 # Music Generator
 Study corpus of music to find Markov chains and finally generate not-totally-random music.
 
+`output/` dir contains some output examples.
+
 
 
 ## Transcription
