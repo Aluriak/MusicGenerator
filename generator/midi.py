@@ -17,10 +17,11 @@ def write(notes:iter, filename:str='output.mid', bpm:int=120):
     from miditime.miditime import MIDITime
     writer = MIDITime(bpm, filename)
     writer.add_track(tuple(notes))
-    writer.save_midi()
+    with Capturing() as output:
+        writer.save_midi()
 
 
-class Capturing(list):
+class Capturing:
     """This is a stdout capturing, used one time to avoid unecessary output
     from the midi tierce library.
 
@@ -31,11 +32,11 @@ class Capturing(list):
     Found at http://stackoverflow.com/a/16571630
 
     """
+
     def __enter__(self):
         self._stdout = sys.stdout
         sys.stdout = self._stringio = StringIO()
         return self
+
     def __exit__(self, *args):
-        self.extend(self._stringio.getvalue().splitlines())
-        del self._stringio    # free up some memory
         sys.stdout = self._stdout
