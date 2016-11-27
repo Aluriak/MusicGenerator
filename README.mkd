@@ -30,6 +30,7 @@ See `requirements.txt` for non-optional packages, and `optional_requirements.txt
 
 ## TSV-that-maps-time-and-notes format
 Example:
+
     100 45
     393 78
 
