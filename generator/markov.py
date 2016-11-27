@@ -28,7 +28,7 @@ def chain(sequence:iter, order:int) -> dict:
     ret = {}
     for prevs, succs in prevs_to_succs.items():
         counts = Counter(succs)
-        total = sum(counts.values())
+        total = len(succs)
         ret[prevs] = { succ: counts[succ] / total for succ in succs }
     return ret
 
