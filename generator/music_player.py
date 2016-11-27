@@ -20,24 +20,33 @@ This way, generated music use up to 4 different waiting times.
 
 import time
 
-from generator.sound import play_midi
+from generator import midi
+from generator import sound
 
-ms_to_sec = lambda t: t / 1000
 
-def play(stream:iter, time_value:callable or dict=ms_to_sec):
+def default_note_player(note:int, sec:int):
+    sound.play_midi(note)
+def ms_to_sec(time):
+    return time / 1000
+
+
+def play(stream:iter, time_value:callable or dict=ms_to_sec,
+         on_note:callable=default_note_player):
     # get (time value) -> (wait value) function
     time_value_caller = time_value
     if isinstance(time_value, dict):
         time_value_caller = lambda x: time_value[x]
     # play
+    current_time = time.time()
     stream = ((note, time_value_caller(ms)) for note, ms in stream)
     for note, sec in stream:
-        play_midi(note)
+        on_note(note, current_time)
         time.sleep(sec)
 
 
-def timed_play(stream:iter, time_value:callable or dict=ms_to_sec):
-    """Same as play(1), but take in account the real time,
+def timed_play(stream:iter, time_value:callable or dict=ms_to_sec,
+               on_note:callable=default_note_player):
+    """Same as play(), but take in account the real time,
     in order to amortize computation cost of the next item of given stream.
 
     """
@@ -49,10 +58,29 @@ def timed_play(stream:iter, time_value:callable or dict=ms_to_sec):
     current_time = time.time()
     wait_time = 0  # first note don't wait
     stream = ((note, time_value_caller(ms)) for note, ms in stream)
-    for note, sec in stream:
-        while time.time() - current < wait_time:
+    for note, wait_time in stream:
+        on_note(note, current_time)
+        while time.time() - current_time < wait_time:
             pass
-        play_midi(note)
-        wait_time = sec
+        current_time = time.time()
 
 
+def midi_writer(stream:iter, time_value:callable or dict=ms_to_sec,
+                midi_filename:str='output.mid', bpm:int=120):
+    """Same as play(2), but write a midi file instead of playing the sounds"""
+
+    # get (time value) -> (wait value) function
+    time_value_caller = time_value
+    if isinstance(time_value, dict):
+        time_value_caller = lambda x: time_value[x]
+    # play
+    def gen_notes():
+        NOTE_VELOCITY = 120
+        NOTE_DURATION = 4
+        play_time = 0.
+        notes = ((note, time_value_caller(ms)) for note, ms in stream)
+        for note, sec in notes:
+            yield [play_time, note, NOTE_VELOCITY, NOTE_DURATION]
+            play_time += sec
+
+    midi.write(gen_notes(), midi_filename, bpm)
