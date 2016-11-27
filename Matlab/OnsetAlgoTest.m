@@ -33,12 +33,13 @@
 %                   run the script        
    
     clear variables; close all; clc
+    addpath('Toolbox')
 
 
 %% Load the audio file 
 tic
 
-   [wav.wav, ct.FS] = audioread('FF10s.wav');
+   [wav.wav, ct.FS] = audioread('AudioRessources/FF10s.wav');
 %    wav.wav=wav.wav(1:1.51e6,1);
    wav.wav=wav.wav(:,1);
     ct.TAILLE=length(wav.wav);

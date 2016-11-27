@@ -34,6 +34,8 @@
 %                   run the script        
    
 clear variables; close all; clc
+addpath('Toolbox')
+
 num=23:106;
 Npt=[512 1024 2048 4092];
 %% Load the audio file 

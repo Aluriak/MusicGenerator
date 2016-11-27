@@ -36,12 +36,12 @@
 %                   run the script      
  
     clear variables; close all; clc
-
+    addpath('Toolbox')
 
 %% Load the audio file 
 tic
 
-   [wav.wav, ct.FS] = audioread('FF30s.wav');
+   [wav.wav, ct.FS] = audioread('AudioRessources/FF10s.wav');
 %    wav.wav=wav.wav(1:30*ct.FS,1);
    wav.wav=wav.wav(:,1);
 
@@ -100,7 +100,6 @@ toc
             pitch = PrimaryPeaks(posPeaks, peaks);
             var.notePos(var.indexNote,2) = pitch(1);
             var.indexNote=ii;
-            
             var.ALD = wav.lastALD+ var.aco(ii) .* wav.buffer;% re-init for ALD
             var.acoSum = sum(var.aco(ii-1:ii));
             %figure;figure;plot(var.ALD);
@@ -142,3 +141,5 @@ toc
             pause(wait(ii))
          end        
     end
+    
+%     fichier=[round(wait*1000)  var.notePos(:,2)];

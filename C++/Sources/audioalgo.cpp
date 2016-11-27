@@ -111,7 +111,7 @@ double energyACF0(double *Input, int NumSigPts)
 {
     double xMin(0);
     for(int i=0;i<NumSigPts;i++)
-    xMin+=pow(Input[i],2);
+        xMin+=pow(Input[i],2);
     return xMin;
 
 }
