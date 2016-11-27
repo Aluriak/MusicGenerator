@@ -33,5 +33,6 @@ if __name__ == "__main__":
     SPEED = 0.6
     classif_value = {c: v*SPEED for c, v in {0: 1, 1: 2, 2: 3, 3: 4}.items()}
     gen = generator.double_independances(notes, mss, time_classifier=classif,
-                                         note_number=10000)
-    music_player.play(gen, classif_value)
+                                         note_number=100)
+    music_player.midi_writer(gen, classif_value,
+                             midi_filename='output/double_independances.mid')
