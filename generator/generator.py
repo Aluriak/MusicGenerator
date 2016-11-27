@@ -33,6 +33,18 @@ from generator import markov
 from generator import classifier
 
 
+def get_method(name:str) -> callable:
+    """Return the method identified by given name, or raise a ValueError"""
+    methods = {
+        'DI': double_independances,
+    }
+    gen_method = methods.get(name)
+    if not gen_method:
+        raise ValueError("Given method name ({}) is not in accepted ones: "
+                         "{}.".format(name, ', '.join(methods)))
+    return gen_method
+
+
 def double_independances(notes:iter, times:iter, *, note_number:int=None,
                          time_limit:int=None,
                          time_classifier:callable=classifier.clusterizer_by(4),
@@ -71,5 +83,3 @@ def double_independances(notes:iter, times:iter, *, note_number:int=None,
         time_state.append(time)
         yield note, time
         played_time += time
-
-
