@@ -5,11 +5,10 @@ Study corpus of music to find Markov chains and finally generate not-totally-ran
 
 
 
-## Transcription
+## Transcription matlab package
 _Objectives :_ get states of a music, in readable format.
 _Input :_ paths to wav files  
 _Output :_ a file where states are described as a TSV that maps time and notes.  
-_Language :_ Matlab
 
 
 ## Generator python package
