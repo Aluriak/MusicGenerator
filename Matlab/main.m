@@ -41,9 +41,9 @@
 %% Load the audio file 
 tic
 
-   [wav.wav, ct.FS] = audioread('AudioRessources/FF10s.wav');
+   [wav.wav, ct.FS] = audioread('FF10s.wav');
 %    wav.wav=wav.wav(1:30*ct.FS,1);
-   wav.wav=wav.wav(:,1);
+   wav.wav=mean(wav.wav,2);
 
    ct.TAILLE=length(wav.wav);
 toc
