@@ -4,7 +4,7 @@ PYTHON=python3
 # default recipe
 all: DI_mz playmid
 
-
+ 
 # generation recipes
 DI_chopin:
 	$(PYTHON) -m generator ./AudioRessources/NotesTrouve/chpn_op23.txt DI --midi=output/chpn_op23_generated_by_double_independances.mid --markov-order=6
