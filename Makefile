@@ -2,12 +2,16 @@ PYTHON=python3
 
 
 # default recipe
-all: DI_mendel playmid
+all: DI_mz playmid
 
 
 # generation recipes
+DI_chopin:
+	$(PYTHON) -m generator ./Matlab/NotesTrouve/chpn_op23.txt DI --midi=output/chpn_op23_generated_by_double_independances.mid --markov-order=6
+DI_mz:
+	$(PYTHON) -m generator ./Matlab/NotesTrouve/mz_332_1.txt DI --midi=output/mz_332_1_generated_by_double_independances.mid --markov-order=6
 DI_mendel:
-	$(PYTHON) -m generator ./Matlab/NotesTrouve/mendel_op19_3.txt DI --midi=output/mendel_generated_by_double_independances.mid --markov-order=7
+	$(PYTHON) -m generator ./Matlab/NotesTrouve/mendel_op19_3.txt DI --midi=output/mendel_generated_by_double_independances.mid --markov-order=6
 DI_notesR:
 	$(PYTHON) -m generator Matlab/NotesTrouve/notesR.txt DI  --midi=output/notesR_generated_by_double_independances.mid --markov-order=3
 DI_notesRlong:
