@@ -2,12 +2,14 @@ PYTHON=python3
 
 
 # default recipe
-all: DI_notesR playmid
+all: DI_mendel playmid
 
 
 # generation recipes
+DI_mendel:
+	$(PYTHON) -m generator ./Matlab/NotesTrouve/mendel_op19_3.txt DI --midi=output/mendel_generated_by_double_independances.mid --markov-order=7
 DI_notesR:
-	$(PYTHON) -m generator Matlab/NotesTrouve/notesR.txt DI --midi=output/notesR_generated_by_double_independances.mid
+	$(PYTHON) -m generator Matlab/NotesTrouve/notesR.txt DI  --midi=output/notesR_generated_by_double_independances.mid --markov-order=3
 DI_notesRlong:
 	$(PYTHON) -m generator Matlab/NotesTrouve/notesRlong.txt DI --midi=output/notesRlong_generated_by_double_independances.mid
 DI_rossini_train:
