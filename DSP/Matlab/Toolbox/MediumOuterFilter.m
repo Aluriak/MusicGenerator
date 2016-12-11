@@ -31,6 +31,7 @@
 %% Yulewak filter def
     yulefilt.f = [0 4000/FNYQ 4000/FNYQ 5000/FNYQ  7500/FNYQ 10000/FNYQ 1];% frequency aimed
     yulefilt.m = [10^(-9/20) 10^(-8/20) 1  1 10^(-16/20) 10^(-15/20) 10^(-70/20)];% value of the above freq
+%     yulefilt.m = [0.98 1 1  1 1 1 1];% value of the above freq
     [yulefilt.b,yulefilt.a] = yulewalk(10,yulefilt.f,yulefilt.m);% design a b 
 
 

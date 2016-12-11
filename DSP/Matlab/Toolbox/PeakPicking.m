@@ -34,7 +34,7 @@ function [ posPeak, peak ] = PeakPicking( input )
 %     debut=debut+1;
 %  end
  
- for i = debut:TAILLE/2
+ for i = debut:TAILLE
     
         if test==0
         
@@ -62,6 +62,10 @@ function [ posPeak, peak ] = PeakPicking( input )
                
  posPeak(1:2)='';
  peak(1:2)='';
+ if posPeak(end)==TAILLE
+    posPeak(end)='';
+    peak(end)='';
+ end
 
 [posPeak,peak]= Interp3Peak(posPeak,input(posPeak-1),peak,input(posPeak+1));
 %if posPeak<0
