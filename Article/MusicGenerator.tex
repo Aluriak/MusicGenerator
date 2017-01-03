@@ -146,8 +146,15 @@ It's proposed in P.McLeod to make a filter simulating this effect using a yulewa
 	\label{mdouterfilt}
 \end{figure}
 \subsection{Aggregate Lag Domain (ALD) }
+Introduced in the thesis of P.McLeod \cite{mcleod2009fast}, the ALD is a way to combine several small windows results which average the result removing fast effect. The combined result is expected to be more stable than a single frame. \\
+It's a simple way of weighting the different frames using their energy :
+\begin{equation}
+ALD = \sum_{i=s}^{e} \frac{r'\_i(0) n'(\tau)}{\sum_{i=s}^{e}r'_i(0)},
+\end{equation} 
+where $e$  and $ e$ are the starting and ending frame indices of the note, and $r'_i(0)$ refers to the squared value of the signal $\sum_{j=0}^{W-1}x^2_j$.
+
 \subsection{Peak picking method}
-\todo{Do a graph recap of the algorithm}
+The peak picking method is realised using a parabolic interpolation on three points. This allows to more accurately localise the first peak containing the pitch, which is critical on high frequency pitch.
 
 \section{Assertion of both method.}
 \chapter{Music note classification}
